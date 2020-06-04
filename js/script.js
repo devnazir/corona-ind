@@ -7,17 +7,17 @@ window.addEventListener('load', async function () {
     jumlahSembuh.innerHTML = await Sembuh;
 });
 
-PositifCorona = dataCoronaIndonesia()
+const PositifCorona = dataCoronaIndonesia()
     .then(response => {
         return response.confirmed.value;
     });
 
-Meninggal = dataCoronaIndonesia()
+const Meninggal = dataCoronaIndonesia()
     .then(response => {
         return response.deaths.value;
     });
 
-Sembuh = dataCoronaIndonesia()
+const Sembuh = dataCoronaIndonesia()
     .then(response => {
         return response.recovered.value;
     });
